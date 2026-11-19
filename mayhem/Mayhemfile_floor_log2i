@@ -1,0 +1,10 @@
+project: savantenvs/basis_universal
+target: floor-log2i
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/floor-log2i/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_floor_log2i
+    libfuzzer: true
+    timeout: 2

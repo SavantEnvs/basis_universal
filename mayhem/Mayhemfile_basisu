@@ -1,0 +1,11 @@
+project: savantenvs/basis_universal
+target: basisu
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/basisu/testsuite
+
+cmds:
+  - cmd: /mayhem/basisu-fuzz -validate -fuzz_testing -no_multithreading @@
+    filepath: input.ktx2
+    afl: true
+    timeout: 10

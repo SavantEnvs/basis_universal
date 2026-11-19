@@ -1,0 +1,10 @@
+project: savantenvs/basis_universal
+target: exr
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/exr/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_exr
+    libfuzzer: true
+    timeout: 10

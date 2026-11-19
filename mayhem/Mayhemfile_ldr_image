@@ -1,0 +1,10 @@
+project: savantenvs/basis_universal
+target: ldr-image
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ldr-image/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_ldr_image
+    libfuzzer: true
+    timeout: 10

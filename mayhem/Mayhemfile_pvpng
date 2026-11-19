@@ -1,0 +1,10 @@
+project: savantenvs/basis_universal
+target: pvpng
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pvpng/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_pvpng
+    libfuzzer: true
+    timeout: 10
